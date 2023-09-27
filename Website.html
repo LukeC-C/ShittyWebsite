@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html id="data" onmousemove="getCursor(event)">
+  <body>
+    <div id="firstR">
+      <button class="btnEsc" id="esc"></button>
+      <button class="btnBaseTop" id="#1"></button>
+      <button class="btnBaseTop" id="#2"></button>
+      <button class="btnBaseTop" id="#3"></button>
+      <button class="btnBaseTop" id="#4"></button>
+      <button class="btnBaseTop" id="#5"></button>
+      <button class="btnBaseTop" id="$6"></button>
+      <button class="btnBaseTop" id="#7"></button>
+      <button class="btnBaseTop" id="#8"></button>
+      <button class="btnBaseTop" id="#9"></button>
+      <button class="btnBaseTop" id="#0"></button>
+      <button class="btnBaseTop" id="-"></button>
+      <button class="btnBaseTop" id="="></button>
+      <button class="btnBksp" id="bksp"></button>
+    </div>
+
+    <div id="secondR">
+      <button class="btnTab" id="tab"></button>
+      <button class="btnBase" id="q"></button>
+      <button class="btnBase" id="w"></button>
+      <button class="btnBase" id="e"></button>
+      <button class="btnBase" id="r"></button>
+      <button class="btnBase" id="t"></button>
+      <button class="btnBase" id="y"></button>
+      <button class="btnBase" id="u"></button>
+      <button class="btnBase" id="i"></button>
+      <button class="btnBase" id="o"></button>
+      <button class="btnBase" id="p"></button>
+      <button class="btnBase" id="["></button>
+      <button class="btnBase" id="]"></button>
+      <button class="btnBkSl" id="\"></button>
+    </div>
+
+    <div id="thirdR">
+      <button class="btnCapsLc" id="CapsLock"></button>
+      <button class="btnBase" id="a"></button>
+      <button class="btnBase" id="s"></button>
+      <button class="btnBase" id="d"></button>
+      <button class="btnBaseFJ" id="f"></button>
+      <button class="btnBase" id="g"></button>
+      <button class="btnBase" id="h"></button>
+      <button class="btnBaseFJ" id="j"></button>
+      <button class="btnBase" id="k"></button>
+      <button class="btnBase" id="l"></button>
+      <button class="btnBase" id=";"></button>
+      <button class="btnBase" id="'"></button>
+      <button class="btnEnter" id="Enter"></button>
+    </div>
+
+    <div id="fourthR">
+      <button class="btnLShift" id="ShiftLeft"></button>
+      <button class="btnBase" id="z"></button>
+      <button class="btnBase" id="x"></button>
+      <button class="btnBase" id="c"></button>
+      <button class="btnBase" id="v"></button>
+      <button class="btnBase" id="b"></button>
+      <button class="btnBase" id="n"></button>
+      <button class="btnBase" id="m"></button>
+      <button class="btnBase" id=","></button>
+      <button class="btnBase" id="."></button>
+      <button class="btnBase" id="/"></button>
+      <button class="btnRShift" id="ShiftRight"></button>
+    </div>
+
+    <div id="fifthR">
+      <button class="btnLCtrl" id="ControlLeft"></button>
+      <button class="btnMeta" id="Meta"></button>
+      <button class="btnAlt" id="AltLeft"></button>
+      <button class="btnSpace" id="Space"></button>
+      <button class="btnAlt" id="AltRight"></button>
+      <button class="btnRCtrl" id="ControlRight"></button>
+      <button class="btnLMB" id="RClick"></button>
+    </div>
+
+    <img class="TypeText" src="TypeText.svg" />
+  </body>
+
+  <script>
+    let message = "";
+
+    function messageConfirm() {
+      if (message == "debug") {
+        console.log("potato");
+      }
+
+      if (message == "about") {
+        // open a new "about" page
+        document.open();
+        document.write(`
+        <html>
+          <body>
+            <img class="About" src="About.svg" />
+
+            <p class="potato">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget molestie orci, nec laoreet orci. Nam in mi in erat congue fringilla. Donec sed accumsan elit. Sed sollicitudin leo est, nec ornare nibh egestas at. Curabitur sit amet scelerisque metus. Nunc et magna id neque fringilla gravida. In pulvinar nulla neque, blandit consectetur tortor tristique a. Mauris ante nisl, aliquam ac efficitur at, placerat ut est. Donec fermentum dignissim ligula vel aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent pellentesque, nibh sed lacinia varius, purus risus molestie arcu, et condimentum tellus leo in urna. Nulla eleifend dolor dui. Suspendisse sollicitudin augue et nibh facilisis, id aliquam ante ultricies. Mauris id laoreet ante.</p>
+          <body>
+            
+          <style>
+            body,
+            html {
+              height: 100%;
+              min-height: 100vh;
+              margin: 0;
+              padding: 0;
+               
+              background-color: #e8f0d9;
+            }
+
+            .About {
+              position: fixed;
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+
+              width: 320px;
+              height: 100px;
+              animation-duration: 5s;
+              animation-name: TextAnimation;
+              animation-iteration-count: infinite;
+            }
+
+            .potato {
+              margin: 250px;
+              padding: 20px;
+              font-family: Helvetica, sans-serif;
+              border: 12px solid #596070;
+            }
+
+            @keyframes TextAnimation {
+              0% {
+                top: 5%;
+                left: calc(50% - 160px);
+              }
+              50% {
+                top: 10%;
+                left: calc(50% - 160px);
+              }
+              100% {
+                top: 5%;
+                left: calc(50% - 160px);
+              }
+            }
+          </style>
+        </html>
+        `);
+
+        document.close();
+      }
+
+      if (message == "stuff") {
+        // open a new "stuff" page
+        document.open();
+        document.write(`
+        <html>
+          <body>
+            <img class="Stuff" src="Stuff.svg" />
+
+            <button class="btnGithub" onclick = "window.location.href='https://github.com/LukeC-C';"></button>
+            <button id="interests" class="btnInterests"></button>
+            <button class="btnChess" onclick = "window.location.href='https://github.com/LukeC-C/ICS3U';"></button>
+          <body>
+            
+          <style>
+            body,
+            html {
+              height: 100%;
+              min-height: 100vh;
+              margin: 0;
+              padding: 0;
+              background-color: #e8f0d9;
+            }
+
+            .btnGithub {
+              position: fixed;
+              display: block;
+              margin-left: 33%;
+              margin-top: 25%;
+
+              background-image: url(Github.svg);
+
+              background-size: cover;
+              background-color: transparent;
+
+              // document.getElementById("interests").setText("");
+               
+              border: 0;
+              width: 110px;
+              height: 250px;
+            }
+
+            .btnInterests {
+              position: fixed;
+              display: block;
+              margin-left: 47%;
+              margin-top: 25%;
+              padding: 3px:
+
+              background-image: url(Interests.svg);
+
+              background-size: cover;
+              background-color: transparent;
+
+              document.getElementById("interests").setText("My interests:");
+               
+              border: 0;
+              width: 110px;
+              height: 250px;
+            }
+
+            .btnInterests:hover {
+              position: fixed;
+              display: block;
+              margin-left: 47%;
+              margin-top: 25%;
+
+              background-image: url(cardBase.svg);
+
+              background-size: cover;
+              background-color: transparent;
+               
+              border: 0;
+              width: 110px;
+              height: 250px;
+            }
+
+            .btnChess {
+              position: fixed;
+              display: block;
+              margin-left: 61%;
+              margin-top: 25%;
+
+              background-image: url(Chess.svg);
+
+              background-size: cover;
+              background-color: transparent;
+               
+              border: 0;
+              width: 110px;
+              height: 250px;
+            }
+
+            .Stuff {
+              position: fixed;
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+
+              width: 320px;
+              height: 100px;
+              animation-duration: 5s;
+              animation-name: TextAnimation;
+              animation-iteration-count: infinite;
+            }
+
+            @keyframes TextAnimation {
+              0% {
+                top: 5%;
+                left: calc(50% - 160px);
+              }
+              50% {
+                top: 10%;
+                left: calc(50% - 160px);
+              }
+              100% {
+                top: 5%;
+                left: calc(50% - 160px);
+              }
+            }
+          </style>
+        </html>
+        `);
+
+        document.close();
+      }
+
+      message = "";
+    }
+
+    // making this huge code block collapsible (idk if this only works in vsc)
+    if (true) {
+      document.onkeydown = function (e) {
+        let key = e.key;
+
+        /* 
+        used to tell the difference between L and R shift / ctrl
+        (i didn't wanna change my entire code for the sake of 2 keys)
+        */
+        let keyCode = e.code;
+
+        // first row
+        if (true) {
+          if (key == "Escape") {
+            document.getElementById("esc").style.background =
+              "url(EscTestTest2.svg)";
+            document.getElementById("esc").style.backgroundSize = "cover";
+          }
+
+          if (key == "1") {
+            document.getElementById("#1").style.background = "url(base2.svg)";
+            document.getElementById("#1").style.backgroundSize = "cover";
+          }
+
+          if (key == "2") {
+            document.getElementById("#2").style.background = "url(base2.svg)";
+            document.getElementById("#2").style.backgroundSize = "cover";
+          }
+
+          if (key == "3") {
+            document.getElementById("#3").style.background = "url(base2.svg)";
+            document.getElementById("#3").style.backgroundSize = "cover";
+          }
+
+          if (key == "4") {
+            document.getElementById("#4").style.background = "url(base2.svg)";
+            document.getElementById("#4").style.backgroundSize = "cover";
+          }
+
+          if (key == "5") {
+            document.getElementById("#5").style.background = "url(base2.svg)";
+            document.getElementById("#5").style.backgroundSize = "cover";
+          }
+
+          if (key == "6") {
+            document.getElementById("#6").style.background = "url(base2.svg)";
+            document.getElementById("#6").style.backgroundSize = "cover";
+          }
+
+          if (key == "7") {
+            document.getElementById("#7").style.background = "url(base2.svg)";
+            document.getElementById("#7").style.backgroundSize = "cover";
+          }
+
+          if (key == "8") {
+            document.getElementById("#8").style.background = "url(base2.svg)";
+            document.getElementById("#8").style.backgroundSize = "cover";
+          }
+
+          if (key == "9") {
+            document.getElementById("#9").style.background = "url(base2.svg)";
+            document.getElementById("#9").style.backgroundSize = "cover";
+          }
+
+          if (key == "0") {
+            document.getElementById("#0").style.background = "url(base2.svg)";
+            document.getElementById("#0").style.backgroundSize = "cover";
+          }
+
+          if (key == "-") {
+            document.getElementById("-").style.background = "url(base2.svg)";
+            document.getElementById("-").style.backgroundSize = "cover";
+          }
+
+          if (key == "=") {
+            document.getElementById("=").style.background = "url(base2.svg)";
+            document.getElementById("=").style.backgroundSize = "cover";
+          }
+
+          if (key == "Backspace") {
+            document.getElementById("bksp").style.background = "url(Bksp2.svg)";
+            document.getElementById("bksp").style.backgroundSize = "cover";
+          }
+        }
+
+        // second row
+        if (true) {
+          if (key == "Tab") {
+            document.getElementById("tab").style.background = "url(Tab2.svg)";
+            document.getElementById("tab").style.backgroundSize = "cover";
+          }
+
+          if (key == "q") {
+            document.getElementById("q").style.background = "url(Base2.svg)";
+            document.getElementById("q").style.backgroundSize = "cover";
+          }
+
+          if (key == "w") {
+            document.getElementById("w").style.background = "url(Base2.svg)";
+            document.getElementById("w").style.backgroundSize = "cover";
+          }
+
+          if (key == "e") {
+            document.getElementById("e").style.background = "url(Base2.svg)";
+            document.getElementById("e").style.backgroundSize = "cover";
+          }
+
+          if (key == "r") {
+            document.getElementById("r").style.background = "url(Base2.svg)";
+            document.getElementById("r").style.backgroundSize = "cover";
+          }
+
+          if (key == "t") {
+            document.getElementById("t").style.background = "url(Base2.svg)";
+            document.getElementById("t").style.backgroundSize = "cover";
+          }
+
+          if (key == "y") {
+            document.getElementById("y").style.background = "url(Base2.svg)";
+            document.getElementById("y").style.backgroundSize = "cover";
+          }
+
+          if (key == "u") {
+            document.getElementById("u").style.background = "url(Base2.svg)";
+            document.getElementById("u").style.backgroundSize = "cover";
+          }
+
+          if (key == "i") {
+            document.getElementById("i").style.background = "url(Base2.svg)";
+            document.getElementById("i").style.backgroundSize = "cover";
+          }
+
+          if (key == "o") {
+            document.getElementById("o").style.background = "url(Base2.svg)";
+            document.getElementById("o").style.backgroundSize = "cover";
+          }
+
+          if (key == "p") {
+            document.getElementById("p").style.background = "url(Base2.svg)";
+            document.getElementById("p").style.backgroundSize = "cover";
+          }
+
+          if (key == "[") {
+            document.getElementById("[").style.background = "url(Base2.svg)";
+            document.getElementById("[").style.backgroundSize = "cover";
+          }
+
+          if (key == "]") {
+            document.getElementById("]").style.background = "url(Base2.svg)";
+            document.getElementById("]").style.backgroundSize = "cover";
+          }
+
+          if (key == "\\") {
+            document.getElementById("\\").style.background = "url(BkSl2.svg)";
+            document.getElementById("\\").style.backgroundSize = "cover";
+          }
+        }
+
+        // third row
+        if (true) {
+          if (key == "CapsLock") {
+            document.getElementById("CapsLock").style.background =
+              "url(CapsLc2.svg)";
+            document.getElementById("CapsLock").style.backgroundSize = "cover";
+          }
+
+          if (key == "a") {
+            document.getElementById("a").style.background = "url(Base2.svg)";
+            document.getElementById("a").style.backgroundSize = "cover";
+          }
+
+          if (key == "s") {
+            document.getElementById("s").style.background = "url(Base2.svg)";
+            document.getElementById("s").style.backgroundSize = "cover";
+          }
+
+          if (key == "d") {
+            document.getElementById("d").style.background = "url(Base2.svg)";
+            document.getElementById("d").style.backgroundSize = "cover";
+          }
+
+          if (key == "f") {
+            document.getElementById("f").style.background = "url(FJKey2.svg)";
+            document.getElementById("f").style.backgroundSize = "cover";
+          }
+
+          if (key == "g") {
+            document.getElementById("g").style.background = "url(Base2.svg)";
+            document.getElementById("g").style.backgroundSize = "cover";
+          }
+
+          if (key == "h") {
+            document.getElementById("h").style.background = "url(Base2.svg)";
+            document.getElementById("h").style.backgroundSize = "cover";
+          }
+
+          if (key == "j") {
+            document.getElementById("j").style.background = "url(FJKey2.svg)";
+            document.getElementById("j").style.backgroundSize = "cover";
+          }
+
+          if (key == "k") {
+            document.getElementById("k").style.background = "url(Base2.svg)";
+            document.getElementById("k").style.backgroundSize = "cover";
+          }
+
+          if (key == "l") {
+            document.getElementById("l").style.background = "url(Base2.svg)";
+            document.getElementById("l").style.backgroundSize = "cover";
+          }
+
+          if (key == ";") {
+            document.getElementById(";").style.background = "url(Base2.svg)";
+            document.getElementById(";").style.backgroundSize = "cover";
+          }
+
+          if (key == "'") {
+            document.getElementById("'").style.background = "url(Base2.svg)";
+            document.getElementById("'").style.backgroundSize = "cover";
+          }
+
+          if (key == "Enter") {
+            document.getElementById("Enter").style.background =
+              "url(Enter2.svg)";
+            document.getElementById("Enter").style.backgroundSize = "cover";
+          }
+        }
+
+        // fourth row
+        if (true) {
+          if (keyCode == "ShiftLeft") {
+            document.getElementById("ShiftLeft").style.background =
+              "url(LShift2.svg)";
+            document.getElementById("ShiftLeft").style.backgroundSize = "cover";
+          }
+
+          if (key == "z") {
+            document.getElementById("z").style.background = "url(Base2.svg)";
+            document.getElementById("z").style.backgroundSize = "cover";
+          }
+
+          if (key == "x") {
+            document.getElementById("x").style.background = "url(Base2.svg)";
+            document.getElementById("x").style.backgroundSize = "cover";
+          }
+
+          if (key == "c") {
+            document.getElementById("c").style.background = "url(Base2.svg)";
+            document.getElementById("c").style.backgroundSize = "cover";
+          }
+
+          if (key == "v") {
+            document.getElementById("v").style.background = "url(Base2.svg)";
+            document.getElementById("v").style.backgroundSize = "cover";
+          }
+
+          if (key == "b") {
+            document.getElementById("b").style.background = "url(Base2.svg)";
+            document.getElementById("b").style.backgroundSize = "cover";
+          }
+
+          if (key == "n") {
+            document.getElementById("n").style.background = "url(Base2.svg)";
+            document.getElementById("n").style.backgroundSize = "cover";
+          }
+
+          if (key == "m") {
+            document.getElementById("m").style.background = "url(Base2.svg)";
+            document.getElementById("m").style.backgroundSize = "cover";
+          }
+
+          if (key == ",") {
+            document.getElementById(",").style.background = "url(Base2.svg)";
+            document.getElementById(",").style.backgroundSize = "cover";
+          }
+
+          if (key == ".") {
+            document.getElementById(".").style.background = "url(Base2.svg)";
+            document.getElementById(".").style.backgroundSize = "cover";
+          }
+
+          if (key == "/") {
+            document.getElementById("/").style.background = "url(Base2.svg)";
+            document.getElementById("/").style.backgroundSize = "cover";
+          }
+
+          if (keyCode == "ShiftRight") {
+            document.getElementById("ShiftRight").style.background =
+              "url(RShift2.svg)";
+            document.getElementById("ShiftRight").style.backgroundSize =
+              "cover";
+          }
+        }
+
+        // fifth row
+        if (true) {
+          if (keyCode == "ControlLeft") {
+            document.getElementById("ControlLeft").style.background =
+              "url(LCtrl2.svg)";
+            document.getElementById("ControlLeft").style.backgroundSize =
+              "cover";
+          }
+
+          if (key == "Meta") {
+            document.getElementById("Meta").style.background = "url(Meta2.svg)";
+            document.getElementById("Meta").style.backgroundSize = "cover";
+          }
+
+          if (keyCode == "AltLeft") {
+            document.getElementById("AltLeft").style.background =
+              "url(Alt2.svg)";
+            document.getElementById("AltLeft").style.backgroundSize = "cover";
+          }
+
+          if (keyCode == "Space") {
+            document.getElementById("Space").style.background =
+              "url(Space2.svg)";
+            document.getElementById("Space").style.backgroundSize = "cover";
+          }
+
+          if (keyCode == "AltRight") {
+            document.getElementById("AltRight").style.background =
+              "url(Alt2.svg)";
+            document.getElementById("AltRight").style.backgroundSize = "cover";
+          }
+
+          if (keyCode == "ControlRight") {
+            document.getElementById("ControlRight").style.background =
+              "url(RCtrl2.svg)";
+            document.getElementById("ControlRight").style.backgroundSize =
+              "cover";
+          }
+        }
+
+        console.log(key);
+      };
+
+      document.onkeyup = function (e) {
+        let key = e.key;
+
+        // look above for explanation
+        let keyCode = e.code;
+
+        // first row
+        if (true) {
+          if (key == "Escape") {
+            message = "";
+
+            document.getElementById("esc").style.background =
+              "url(EscTestTest1.svg)";
+            document.getElementById("esc").style.backgroundSize = "cover";
+          }
+
+          if (key == "1") {
+            message += "1";
+
+            document.getElementById("#1").style.background = "url(base1.svg)";
+            document.getElementById("#1").style.backgroundSize = "cover";
+          }
+
+          if (key == "2") {
+            message += "2";
+
+            document.getElementById("#2").style.background = "url(base1.svg)";
+            document.getElementById("#2").style.backgroundSize = "cover";
+          }
+
+          if (key == "3") {
+            message += "3";
+
+            document.getElementById("#3").style.background = "url(base1.svg)";
+            document.getElementById("#3").style.backgroundSize = "cover";
+          }
+
+          if (key == "4") {
+            message += "4";
+
+            document.getElementById("#4").style.background = "url(base1.svg)";
+            document.getElementById("#4").style.backgroundSize = "cover";
+          }
+
+          if (key == "5") {
+            message += "5";
+
+            document.getElementById("#5").style.background = "url(base1.svg)";
+            document.getElementById("#5").style.backgroundSize = "cover";
+          }
+
+          if (key == "6") {
+            message += "6";
+
+            document.getElementById("#6").style.background = "url(base1.svg)";
+            document.getElementById("#6").style.backgroundSize = "cover";
+          }
+
+          if (key == "7") {
+            message += "7";
+
+            document.getElementById("#7").style.background = "url(base1.svg)";
+            document.getElementById("#7").style.backgroundSize = "cover";
+          }
+
+          if (key == "8") {
+            message += "8";
+
+            document.getElementById("#8").style.background = "url(base1.svg)";
+            document.getElementById("#8").style.backgroundSize = "cover";
+          }
+
+          if (key == "9") {
+            message += "9";
+
+            document.getElementById("#9").style.background = "url(base1.svg)";
+            document.getElementById("#9").style.backgroundSize = "cover";
+          }
+
+          if (key == "0") {
+            message += "0";
+
+            document.getElementById("#0").style.background = "url(base1.svg)";
+            document.getElementById("#0").style.backgroundSize = "cover";
+          }
+
+          if (key == "-") {
+            message += "-";
+
+            document.getElementById("-").style.background = "url(base1.svg)";
+            document.getElementById("-").style.backgroundSize = "cover";
+          }
+
+          if (key == "=") {
+            message += "=";
+
+            document.getElementById("=").style.background = "url(base1.svg)";
+            document.getElementById("=").style.backgroundSize = "cover";
+          }
+
+          if (key == "Backspace") {
+            // just backspaces the string ig
+            message = message.substring(0, message.length - 2);
+
+            document.getElementById("bksp").style.background = "url(Bksp1.svg)";
+            document.getElementById("bksp").style.backgroundSize = "cover";
+          }
+        }
+
+        // second row
+        if (true) {
+          if (key == "Tab") {
+            message += "  ";
+
+            document.getElementById("tab").style.background = "url(Tab1.svg)";
+            document.getElementById("tab").style.backgroundSize = "cover";
+          }
+
+          if (key == "q") {
+            message += "q";
+
+            document.getElementById("q").style.background = "url(Base1.svg)";
+            document.getElementById("q").style.backgroundSize = "cover";
+          }
+
+          if (key == "w") {
+            message += "w";
+
+            document.getElementById("w").style.background = "url(Base1.svg)";
+            document.getElementById("w").style.backgroundSize = "cover";
+          }
+
+          if (key == "e") {
+            message += "e";
+
+            document.getElementById("e").style.background = "url(Base1.svg)";
+            document.getElementById("e").style.backgroundSize = "cover";
+          }
+
+          if (key == "r") {
+            message += "r";
+
+            document.getElementById("r").style.background = "url(Base1.svg)";
+            document.getElementById("r").style.backgroundSize = "cover";
+          }
+
+          if (key == "t") {
+            message += "t";
+
+            document.getElementById("t").style.background = "url(Base1.svg)";
+            document.getElementById("t").style.backgroundSize = "cover";
+          }
+
+          if (key == "y") {
+            message += "y";
+
+            document.getElementById("y").style.background = "url(Base1.svg)";
+            document.getElementById("y").style.backgroundSize = "cover";
+          }
+
+          if (key == "u") {
+            message += "u";
+
+            document.getElementById("u").style.background = "url(Base1.svg)";
+            document.getElementById("u").style.backgroundSize = "cover";
+          }
+
+          if (key == "i") {
+            message += "i";
+
+            document.getElementById("i").style.background = "url(Base1.svg)";
+            document.getElementById("i").style.backgroundSize = "cover";
+          }
+
+          if (key == "o") {
+            message += "o";
+
+            document.getElementById("o").style.background = "url(Base1.svg)";
+            document.getElementById("o").style.backgroundSize = "cover";
+          }
+
+          if (key == "p") {
+            message += "p";
+
+            document.getElementById("p").style.background = "url(Base1.svg)";
+            document.getElementById("p").style.backgroundSize = "cover";
+          }
+
+          if (key == "[") {
+            message += "[";
+
+            document.getElementById("[").style.background = "url(Base1.svg)";
+            document.getElementById("[").style.backgroundSize = "cover";
+          }
+
+          if (key == "]") {
+            message += "]";
+
+            document.getElementById("]").style.background = "url(Base1.svg)";
+            document.getElementById("]").style.backgroundSize = "cover";
+          }
+
+          if (key == "\\") {
+            message += "\\";
+
+            document.getElementById("\\").style.background = "url(BkSl1.svg)";
+            document.getElementById("\\").style.backgroundSize = "cover";
+          }
+        }
+
+        // third row (maybe)
+        if (true) {
+          if (key == "CapsLock") {
+            document.getElementById("CapsLock").style.background =
+              "url(CapsLc1.svg)";
+            document.getElementById("CapsLock").style.backgroundSize = "cover";
+          }
+
+          if (key == "a") {
+            message += "a";
+
+            document.getElementById("a").style.background = "url(Base1.svg)";
+            document.getElementById("a").style.backgroundSize = "cover";
+          }
+
+          if (key == "s") {
+            message += "s";
+
+            document.getElementById("s").style.background = "url(Base1.svg)";
+            document.getElementById("s").style.backgroundSize = "cover";
+          }
+
+          if (key == "d") {
+            message += "d";
+
+            document.getElementById("d").style.background = "url(Base1.svg)";
+            document.getElementById("d").style.backgroundSize = "cover";
+          }
+
+          if (key == "f") {
+            message += "f";
+
+            document.getElementById("f").style.background = "url(FJKey1.svg)";
+            document.getElementById("f").style.backgroundSize = "cover";
+          }
+
+          if (key == "g") {
+            message += "g";
+
+            document.getElementById("g").style.background = "url(Base1.svg)";
+            document.getElementById("g").style.backgroundSize = "cover";
+          }
+
+          if (key == "h") {
+            message += "h";
+
+            document.getElementById("h").style.background = "url(Base1.svg)";
+            document.getElementById("h").style.backgroundSize = "cover";
+          }
+
+          if (key == "j") {
+            message += "j";
+
+            document.getElementById("j").style.background = "url(FJKey1.svg)";
+            document.getElementById("j").style.backgroundSize = "cover";
+          }
+
+          if (key == "k") {
+            message += "k";
+
+            document.getElementById("k").style.background = "url(Base1.svg)";
+            document.getElementById("k").style.backgroundSize = "cover";
+          }
+
+          if (key == "l") {
+            message += "l";
+
+            document.getElementById("l").style.background = "url(Base1.svg)";
+            document.getElementById("l").style.backgroundSize = "cover";
+          }
+
+          if (key == ";") {
+            message += ";";
+
+            document.getElementById(";").style.background = "url(Base1.svg)";
+            document.getElementById(";").style.backgroundSize = "cover";
+          }
+
+          if (key == "'") {
+            message += "'";
+
+            document.getElementById("'").style.background = "url(Base1.svg)";
+            document.getElementById("'").style.backgroundSize = "cover";
+          }
+
+          if (key == "Enter") {
+            messageConfirm();
+
+            document.getElementById("Enter").style.background =
+              "url(Enter1.svg)";
+            document.getElementById("Enter").style.backgroundSize = "cover";
+          }
+        }
+
+        // take a guess (its fine if you dont)
+        // TODO fix whatever the hell is wrong with the shift keys
+        if (true) {
+          if (keyCode == "ShiftLeft") {
+            document.getElementById("ShiftLeft").style.background =
+              "url(LShift1.svg)";
+            document.getElementById("ShiftLeft").style.backgroundSize = "cover";
+          }
+
+          if (key == "z") {
+            message += "z";
+
+            document.getElementById("z").style.background = "url(Base1.svg)";
+            document.getElementById("z").style.backgroundSize = "cover";
+          }
+
+          if (key == "x") {
+            message += "x";
+
+            document.getElementById("x").style.background = "url(Base1.svg)";
+            document.getElementById("x").style.backgroundSize = "cover";
+          }
+
+          if (key == "c") {
+            message += "c";
+
+            document.getElementById("c").style.background = "url(Base1.svg)";
+            document.getElementById("c").style.backgroundSize = "cover";
+          }
+
+          if (key == "v") {
+            message += "v";
+
+            document.getElementById("v").style.background = "url(Base1.svg)";
+            document.getElementById("v").style.backgroundSize = "cover";
+          }
+
+          if (key == "b") {
+            message += "b";
+
+            document.getElementById("b").style.background = "url(Base1.svg)";
+            document.getElementById("b").style.backgroundSize = "cover";
+          }
+
+          if (key == "n") {
+            message += "n";
+
+            document.getElementById("n").style.background = "url(Base1.svg)";
+            document.getElementById("n").style.backgroundSize = "cover";
+          }
+
+          if (key == "m") {
+            message += "m";
+
+            document.getElementById("m").style.background = "url(Base1.svg)";
+            document.getElementById("m").style.backgroundSize = "cover";
+          }
+
+          if (key == ",") {
+            message += ",";
+
+            document.getElementById(",").style.background = "url(Base1.svg)";
+            document.getElementById(",").style.backgroundSize = "cover";
+          }
+
+          if (key == ".") {
+            message += ".";
+
+            document.getElementById(".").style.background = "url(Base1.svg)";
+            document.getElementById(".").style.backgroundSize = "cover";
+          }
+
+          if (key == "/") {
+            message += "/";
+
+            document.getElementById("/").style.background = "url(Base1.svg)";
+            document.getElementById("/").style.backgroundSize = "cover";
+          }
+
+          if (keyCode == "ShiftRight") {
+            document.getElementById("ShiftRight").style.background =
+              "url(RShift1.svg)";
+            document.getElementById("ShiftRight").style.backgroundSize =
+              "cover";
+          }
+        }
+
+        // not the fifth row
+        if (true) {
+          if (keyCode == "ControlLeft") {
+            document.getElementById("ControlLeft").style.background =
+              "url(LCtrl1.svg)";
+            document.getElementById("ControlLeft").style.backgroundSize =
+              "cover";
+          }
+
+          if (key == "Meta") {
+            document.getElementById("Meta").style.background = "url(Meta1.svg)";
+            document.getElementById("Meta").style.backgroundSize = "cover";
+          }
+
+          if (keyCode == "AltLeft") {
+            document.getElementById("AltLeft").style.background =
+              "url(Alt1.svg)";
+            document.getElementById("AltLeft").style.backgroundSize = "cover";
+          }
+
+          if (keyCode == "Space") {
+            message += " ";
+
+            document.getElementById("Space").style.background =
+              "url(Space1.svg)";
+            document.getElementById("Space").style.backgroundSize = "cover";
+          }
+
+          if (keyCode == "AltRight") {
+            document.getElementById("AltRight").style.background =
+              "url(Alt1.svg)";
+            document.getElementById("AltRight").style.backgroundSize = "cover";
+          }
+
+          if (keyCode == "ControlRight") {
+            document.getElementById("ControlRight").style.background =
+              "url(RCtrl1.svg)";
+            document.getElementById("ControlRight").style.backgroundSize =
+              "cover";
+          }
+        }
+
+        console.log(key);
+      };
+    }
+
+    function getCursor(event) {
+      let x = event.clientX;
+      let y = event.clientY;
+    }
+  </script>
+
+  <style>
+    :root {
+      --w: calc(11px * 7.5);
+      --h: calc(12px * 7.5);
+      --m: 40px;
+    }
+
+    body,
+    html {
+      height: 100%;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+       
+      background-color: #e8f0d9;
+    }
+
+    /* remove scrollbar (it looks bad) */
+    ::-webkit-scrollbar {
+      width: 0px;
+    }
+
+    .TypeText {
+      position: fixed;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+
+      width: 320px;
+      height: 100px;
+      animation-duration: 5s;
+      animation-name: TextAnimation;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes TextAnimation {
+      0% {
+        top: 70%;
+        left: calc(50% - 160px);
+      }
+      50% {
+        top: 75%;
+        left: calc(50% - 160px);
+      }
+      100% {
+        top: 70%;
+        left: calc(50% - 160px);
+      }
+    }
+
+    .btnEsc {
+      background-image: url(EscTestTest1.svg);
+
+      background-size: cover;
+      background-color: transparent;
+       
+      border: 0;
+      width: var(--w);
+      height: var(--h);
+      margin-left: var(--m);
+      margin-top: var(--m);
+    }
+
+    .btnBaseTop {
+      /* This one has a top margin */
+      background-image: url(Base1.svg);
+
+      background-size: cover;
+      background-color: transparent;
+       
+      border: 0;
+      width: var(--w);
+      height: var(--h);
+      margin-top: var(--m);
+    }
+
+    .btnBase {
+      background-image: url(Base1.svg);
+
+      background-size: cover;
+      background-color: transparent;
+       
+      border: 0;
+      width: var(--w);
+      height: var(--h);
+    }
+
+    .btnBksp {
+      background-image: url(Bksp1.svg);
+
+      background-size: cover;
+      background-color: transparent;
+       
+      border: 0;
+      width: calc(var(--w) * (24 / 11));
+      height: var(--h);
+      margin-top: var(--m);
+    }
+
+    .btnTab {
+      background-image: url(Tab1.svg);
+
+      background-size: cover;
+      background-color: transparent;
+       
+      border: 0;
+      width: calc(var(--w) * (20 / 11));
+      height: var(--h);
+      margin-left: var(--m);
+    }
+
+    .btnBkSl {
+      background-image: url(BkSl1.svg);
+
+      background-size: cover;
+      background-color: transparent;
+       
+      border: 0;
+      width: calc(var(--w) * (15 / 11));
+      height: var(--h);
+    }
+
+    .btnCapsLc {
+      background-image: url(CapsLc1.svg);
+
+      background-size: cover;
+      background-color: transparent;
+       
+      border: 0;
+      width: calc(var(--w) * 2);
+      height: var(--h);
+      margin-left: var(--m);
+    }
+
+    .btnBaseFJ {
+      background-image: url(FJKey1.svg);
+
+      background-size: cover;
+      background-color: transparent;
+       
+      border: 0;
+      width: calc(var(--w));
+      height: var(--h);
+    }
+
+    .btnEnter {
+      background-image: url(Enter1.svg);
+
+      background-size: cover;
+      background-color: transparent;
+       
+      border: 0;
+      width: calc(var(--w) * (25 / 11));
+      height: var(--h);
+    }
+
+    .btnLShift {
+      background-image: url(LShift1.svg);
+
+      background-size: cover;
+      background-color: transparent;
+       
+      border: 0;
+      width: calc(var(--w) * (28 / 11));
+      height: var(--h);
+      margin-left: var(--m);
+    }
+
+    .btnRShift {
+      /* This one doesnt have the left margin */
+      background-image: url(RShift1.svg);
+
+      background-size: cover;
+      background-color: transparent;
+       
+      border: 0;
+      width: calc(var(--w) * (31 / 11));
+      height: var(--h);
+    }
+
+    .btnLCtrl {
+      background-image: url(LCtrl1.svg);
+
+      background-size: cover;
+      background-color: transparent;
+       
+      border: 0;
+      width: calc(var(--w) * (16 / 11));
+      height: var(--h);
+      margin-left: var(--m);
+    }
+
+    .btnRCtrl {
+      /* this one doesn't have the left margin */
+      background-image: url(LCtrl1.svg);
+
+      background-size: cover;
+      background-color: transparent;
+       
+      border: 0;
+      width: calc(var(--w) * (16 / 11));
+      height: var(--h);
+    }
+
+    .btnAlt {
+      background-image: url(LAlt1.svg);
+
+      background-size: cover;
+      background-color: transparent;
+       
+      border: 0;
+      width: calc(var(--w) * (13 / 11));
+      height: var(--h);
+    }
+
+    .btnMeta {
+      background-image: url(Meta1.svg);
+
+      background-size: cover;
+      background-color: transparent;
+       
+      border: 0;
+      width: calc(var(--w));
+      height: var(--h);
+    }
+
+    .btnSpace {
+      background-image: url(Space1.svg);
+
+      background-size: cover;
+      background-color: transparent;
+       
+      border: 0;
+      width: calc(var(--w) * (89 / 11));
+      height: var(--h);
+    }
+
+    .btnLMB {
+      background-image: url(Click1.svg);
+
+      background-size: cover;
+      background-color: transparent;
+       
+      /* cursor: url("Cursor.svg"), auto; */
+      border: 0;
+      width: calc(var(--w) * (13 / 11));
+      height: var(--h);
+    }
+  </style>
+</html>
